@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语工作室考勤监测系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>英语工作室考勤监测系统</h1>
+        <div class="auth-container">
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">登录</button>
+                <button class="tab-btn" data-tab="register">注册</button>
+            </div>
+            
+            <!-- 登录表单 -->
+            <div class="tab-content active" id="login">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-username">账号</label>
+                        <input type="text" id="login-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">密码</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-type">用户类型</label>
+                        <select id="user-type" required>
+                            <option value="student">学生</option>
+                            <option value="admin">管理员</option>
+                        </select>
+                    </div>
+                    <div style="text-align: center; margin: 15px 0; font-size: 14px; color: #666;">
+                        学生初始密码为：888888
+                    </div>
+                    <button type="submit" class="submit-btn">登录</button>
+                </form>
+            </div>
+            
+            <!-- 注册表单 -->
+            <div class="tab-content" id="register">
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-name">姓名</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-phone">电话号码</label>
+                        <input type="tel" id="register-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="study-level">学习阶段</label>
+                        <select id="study-level" required>
+                            <option value="junior">初中</option>
+                            <option value="high">高中</option>
+                            <option value="cet4">大学四级</option>
+                            <option value="cet6">大学六级</option>
+                            <option value="ielts">雅思</option>
+                            <option value="toefl">托福</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exam-date">考试时间（可选）</label>
+                        <input type="date" id="exam-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="goals">目标要求（可选）</label>
+                        <textarea id="goals" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">注册</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
